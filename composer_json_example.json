@@ -1,0 +1,11 @@
+{
+	"autoload": {
+		"psr-4" : {
+			"Controller\\Controller\\" : "controller\\controller",
+			"Controller\\Attribute\\" : "controller\\attribute",
+			"App\\App\\" : "app\\app",
+			"App\\Helper\\" : "app\\helper",
+			"App\\Interface\\" : "app\\interface"
+		}
+	}
+}
