@@ -9,7 +9,8 @@ use \App\App\Router;
 use \Controller\Controller\MaintenanceController;
 
 $routes_prefixes = [
-	'/' => 'HomeController'
+	'/' => 'HomeController',
+	'login' => 'LoginController'
 ];
 
 new Router(
