@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !.*index.php.*
+RewriteCond %{REQUEST_URI} .*(view\/administrator\/js\/.*) [OR]
+RewriteCond %{REQUEST_URI} !.*(public\/.*|view\/.*\.(css$|js$))
+RewriteRule (.*) index.php/$1
+#allow to have a public folder
+# allow to have a view folder which can contain css and js folder (+in a subfolder)
+# block access to an administrator js folder line 3 with path (view/administrator/js/*)
