@@ -19,7 +19,7 @@ class Route
     )
     {
         $this->call_method_list = array_map(
-            fn (string $method) => strtolower($method),
+            fn (string $method):string => strtolower($method),
             explode(',',$call_methods)
         );
 
