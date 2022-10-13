@@ -79,6 +79,8 @@ class Router
 
 		if($this->controller_to_call != NULL)
 		{
+			$_ENV = $this->config_file_content;
+			
 			$controller = new $this->controller_to_call();
 
 			$controller->{$this->method_to_call}();
