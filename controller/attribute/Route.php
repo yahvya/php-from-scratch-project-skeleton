@@ -34,7 +34,7 @@ class Route
         foreach($this->regex_list as $regex)
         {
             if(@preg_match("#^$regex$#",$url_path) )
-                return true && in_array(strtolower($_SERVER['REQUEST_METHOD']),$this->call_method_list);
+                return in_array(strtolower($_SERVER['REQUEST_METHOD']),$this->call_method_list);
         }
         
         return false;
