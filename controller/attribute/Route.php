@@ -14,7 +14,7 @@ class Route
         @format call method separated with comma 
     */
     public function __construct(
-        private string $call_methods,
+        string $call_methods,
         string... $path_list
     )
     {
