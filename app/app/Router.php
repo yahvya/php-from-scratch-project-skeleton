@@ -59,13 +59,12 @@ class Router
 		)
 		{
 			if($maintenance_manager != NULL)
-			{
 				$maintenance_manager->show_maintenance_page();
-
-				die();
-			}
-			else $this->print_default_maintenance_page();
-		}
+			else 
+                                $this->print_default_maintenance_page();
+		
+                        die();
+                }
 
 		// find the controller to call
 
