@@ -36,12 +36,11 @@ class Router
 		if(!$this->set_config_file_content($config_file_path) )
 		{
 			if($internal_error_controller != NULL)
-			{
 				new ($controllers_namespace . $internal_error_controller)();
-				
-				die();
-			}
-			else $this->print_default_internal_error_page();
+			else 
+                                $this->print_default_internal_error_page();
+
+                        die();
 		}
 
 		if(!isset($this->config_file_content['maintenance']) )
