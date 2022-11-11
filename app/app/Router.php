@@ -47,6 +47,8 @@ class Router
 			throw new Exception('Badly formed config file');
 
 		$this->config_file_content['maintenance'] = boolval($this->config_file_content['maintenance']);
+		
+		$_ENV = $this->config_file_content;
 
 		// manage maintenance mode
 		if
@@ -77,8 +79,6 @@ class Router
 
 		if($this->controller_to_call != NULL)
 		{
-			$_ENV = $this->config_file_content;
-			
 			$controller = new $this->controller_to_call();
 
 			$controller->{$this->method_to_call}();
